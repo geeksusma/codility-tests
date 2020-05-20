@@ -1,4 +1,4 @@
-package geeksusma.arrayrotation;
+package es.geeksusma.arrayrotation;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
