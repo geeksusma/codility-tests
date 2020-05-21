@@ -1,4 +1,4 @@
-package geeksusma.frogjumps;
+package es.geeksusma.frogjumps;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Before;

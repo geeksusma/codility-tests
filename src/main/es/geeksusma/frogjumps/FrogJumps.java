@@ -1,4 +1,4 @@
-package geeksusma.frogjumps;
+package es.geeksusma.frogjumps;
 
 public class FrogJumps {
 

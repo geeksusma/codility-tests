@@ -1,4 +1,4 @@
-package geeksusma.arrayrotation;
+package es.geeksusma.arrayrotation;
 
 class ArrayRotation {
 
