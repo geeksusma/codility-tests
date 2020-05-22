@@ -65,9 +65,9 @@ that, given three integers X, Y and D, returns the minimal number of jumps from 
 
 For example, given:
 
-  X = 10
-  Y = 85
-  D = 30
+    X = 10
+    Y = 85
+    D = 30
 the function should return 3, because the frog will be positioned as follows:
 
 after the first jump, at position 10 + 30 = 40
@@ -83,9 +83,9 @@ A non-empty array A consisting of N integers is given. The array contains an odd
 
 For example, in array A such that:
 
-  A[0] = 9  A[1] = 3  A[2] = 9
-  A[3] = 3  A[4] = 9  A[5] = 7
-  A[6] = 9
+    A[0] = 9  A[1] = 3  A[2] = 9
+    A[3] = 3  A[4] = 9  A[5] = 7
+    A[6] = 9
 the elements at indexes 0 and 2 have value 9,
 the elements at indexes 1 and 3 have value 3,
 the elements at indexes 4 and 6 have value 9,
@@ -98,9 +98,9 @@ that, given an array A consisting of N integers fulfilling the above conditions,
 
 For example, given array A such that:
 
-  A[0] = 9  A[1] = 3  A[2] = 9
-  A[3] = 3  A[4] = 9  A[5] = 7
-  A[6] = 9
+    A[0] = 9  A[1] = 3  A[2] = 9
+    A[3] = 3  A[4] = 9  A[5] = 7
+    A[6] = 9
 the function should return 7, as explained in the example above.
 
 Write an efficient algorithm for the following assumptions:
@@ -123,10 +123,10 @@ that, given an array A, returns the value of the missing element.
 
 For example, given array A such that:
 
-  A[0] = 2
-  A[1] = 3
-  A[2] = 1
-  A[3] = 5
+    A[0] = 2
+    A[1] = 3
+    A[2] = 1
+    A[3] = 5
 the function should return 4, as it is the missing element.
 
 Write an efficient algorithm for the following assumptions:
@@ -146,17 +146,17 @@ In other words, it is the absolute difference between the sum of the first part 
 
 For example, consider array A such that:
 
-  A[0] = 3
-  A[1] = 1
-  A[2] = 2
-  A[3] = 4
-  A[4] = 3
+    A[0] = 3
+    A[1] = 1
+    A[2] = 2
+    A[3] = 4
+    A[4] = 3
 We can split this tape in four places:
 
-P = 1, difference = |3 − 10| = 7
-P = 2, difference = |4 − 9| = 5
-P = 3, difference = |6 − 7| = 1
-P = 4, difference = |10 − 3| = 7
+    P = 1, difference = |3 − 10| = 7
+    P = 2, difference = |4 − 9| = 5
+    P = 3, difference = |6 − 7| = 1
+    P = 4, difference = |10 − 3| = 7
 Write a function:
 
 class Solution { public int solution(int[] A); }
@@ -165,11 +165,11 @@ that, given a non-empty array A of N integers, returns the minimal difference th
 
 For example, given:
 
-  A[0] = 3
-  A[1] = 1
-  A[2] = 2
-  A[3] = 4
-  A[4] = 3
+    A[0] = 3
+    A[1] = 1
+    A[2] = 2
+    A[3] = 4
+    A[4] = 3
 the function should return 1, as explained above.
 
 Write an efficient algorithm for the following assumptions:
@@ -194,3 +194,56 @@ Write an efficient algorithm for the following assumptions:
 
 N is an integer within the range [1..100,000];
 each element of array A is an integer within the range [−1,000,000..1,000,000].
+
+##Max Counters
+You are given N counters, initially set to 0, and you have two possible operations on them:
+
+increase(X) − counter X is increased by 1,
+max counter − all counters are set to the maximum value of any counter.
+A non-empty array A of M integers is given. This array represents consecutive operations:
+
+if A[K] = X, such that 1 ≤ X ≤ N, then operation K is increase(X),
+if A[K] = N + 1 then operation K is max counter.
+For example, given integer N = 5 and array A such that:
+
+    A[0] = 3
+    A[1] = 4
+    A[2] = 4
+    A[3] = 6
+    A[4] = 1
+    A[5] = 4
+    A[6] = 4
+the values of the counters after each consecutive operation will be:
+
+    (0, 0, 1, 0, 0)
+    (0, 0, 1, 1, 0)
+    (0, 0, 1, 2, 0)
+    (2, 2, 2, 2, 2)
+    (3, 2, 2, 2, 2)
+    (3, 2, 2, 3, 2)
+    (3, 2, 2, 4, 2)
+The goal is to calculate the value of every counter after all operations.
+
+Write a function:
+
+class Solution { public int[] solution(int N, int[] A); }
+
+that, given an integer N and a non-empty array A consisting of M integers, returns a sequence of integers representing the values of the counters.
+
+Result array should be returned as an array of integers.
+
+For example, given:
+
+    A[0] = 3
+    A[1] = 4
+    A[2] = 4
+    A[3] = 6
+    A[4] = 1
+    A[5] = 4
+    A[6] = 4
+the function should return [3, 2, 2, 4, 2], as explained above.
+
+Write an efficient algorithm for the following assumptions:
+
+N and M are integers within the range [1..100,000];
+each element of array A is an integer within the range [1..N + 1].
