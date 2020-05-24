@@ -40,6 +40,16 @@ public class PermCheckTest {
         assertThat(solution).isEqualTo(expected);
 	}
 
+	@Test
+	public void should_expected_when_arrayIsNotPermutationByRepeated() {
+		//given
+		final int [] A= {4,1,1,3,2};
+		final int expected = 0;
+		//when
+		int solution = permCheck.solution(A);
+		//then
+        assertThat(solution).isEqualTo(expected);
+	}
 	
 
 	@Test
