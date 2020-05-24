@@ -32,7 +32,7 @@ public class PermCheckTest {
 	@Test
 	public void should_expected_when_arrayIsNotPermutation() {
 		//given
-		final int [] A= {4,1,3};
+		final int [] A= {4,2,3};
 		final int expected = 0;
 		//when
 		int solution = permCheck.solution(A);
@@ -40,11 +40,13 @@ public class PermCheckTest {
         assertThat(solution).isEqualTo(expected);
 	}
 
+	
+
 	@Test
-	public void should_expected_when_arrayMinIsTwoAndIsPermutation() {
+	public void should_expected_when_arrayOneElement() {
 		//given
-		final int [] A= {4,3,2};
-		final int expected = 1;
+		final int [] A= {2};
+		final int expected = 0;
 		//when
 		int solution = permCheck.solution(A);
 		//then
@@ -53,9 +55,9 @@ public class PermCheckTest {
 	
 
 	@Test
-	public void should_expected_when_arrayMinIsMayorOneAndIsPermutation() {
+	public void should_expected_when_arrayOneElementFirst() {
 		//given
-		final int [] A= {4,3,5};
+		final int [] A= {1};
 		final int expected = 1;
 		//when
 		int solution = permCheck.solution(A);
