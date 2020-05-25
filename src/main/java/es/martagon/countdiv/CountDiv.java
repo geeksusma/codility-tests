@@ -24,10 +24,6 @@ class CountDiv {
 			
 			if (A % K == 0 || B%K==0)
 				count++;
-			
-			// a need one more jump
-//			if (A + (count * K) < B)
-//				count++;
 		}
 
 		return count;
