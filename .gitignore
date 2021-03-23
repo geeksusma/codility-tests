@@ -6,3 +6,4 @@ target/
 .project
 *.class
 .idea/
+/.metadata/
