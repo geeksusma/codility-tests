@@ -1,17 +1,17 @@
 package es.agustinventura.missinginteger;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
-class SolutionTest {
+public class SolutionTest {
 
     private Solution sut;
 
-    @BeforeEach
-    private void setUp() {
+    @Before
+    public void setUp() {
         sut = new Solution();
     }
 

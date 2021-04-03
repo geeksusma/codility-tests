@@ -1,15 +1,15 @@
 package es.agustinventura.binarygap;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.Before;
+import org.junit.Test;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SolutionTest {
 
 	private Solution sut;
 
-	@BeforeEach
+	@Before
 	public void setUp() {
 		sut = new Solution();
 	}

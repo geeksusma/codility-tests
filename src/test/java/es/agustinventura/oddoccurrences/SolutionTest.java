@@ -1,31 +1,28 @@
 package es.agustinventura.oddoccurrences;
 
-import es.agustinventura.oddoccurrences.Solution;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class SolutionTest {
+public class SolutionTest {
 
     Solution sut;
 
-    @BeforeEach
-    private void setUp() {
+    @Before
+    public void setUp() {
         sut = new Solution();
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void emptyArrayShouldThrowException() {
-        Exception expectedException = assertThrows(IllegalArgumentException.class, () -> sut.solution(new int[] {}));
-        assertThat(expectedException).isNotNull();
+        sut.solution(new int[] {});
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void evenLengthArrayShouldThrowException() {
-        Exception expectedException = assertThrows(IllegalArgumentException.class, () -> sut.solution(new int[] {1, 1}));
-        assertThat(expectedException).isNotNull();
+        sut.solution(new int[] {1, 1});
     }
 
     @Test

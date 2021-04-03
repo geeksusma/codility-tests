@@ -1,30 +1,28 @@
 package es.agustinventura.frogjmp;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
-class SolutionTest {
+public class SolutionTest {
 
     Solution sut;
 
-    @BeforeEach
-    private void setUp() {
+    @Before
+    public void setUp() {
         sut = new Solution();
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void endPointLowerThanStartingPointShouldThrowException() {
-        Exception expectedException = assertThrows(IllegalArgumentException.class, () -> sut.solution(10, 0, 10));
-        assertThat(expectedException).isNotNull();
+        sut.solution(10, 0, 10);
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void lessThanOneJumpDistanceShouldThrowException() {
-        Exception expectedException = assertThrows(IllegalArgumentException.class, () -> sut.solution(10, 20, 0));
-        assertThat(expectedException).isNotNull();
+        sut.solution(10, 20, 0);
     }
 
     @Test

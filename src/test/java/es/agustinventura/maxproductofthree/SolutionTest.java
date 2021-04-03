@@ -1,15 +1,15 @@
 package es.agustinventura.maxproductofthree;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
-class SolutionTest {
+public class SolutionTest {
     private Solution sut;
 
-    @BeforeEach
+    @Before
     public void setUp() {
         sut = new Solution();
     }
