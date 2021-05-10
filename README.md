@@ -1,4 +1,6 @@
 # CODILITY TESTS
+![Build](https://travis-ci.com/geeksusma/codility-tests.svg?branch=master)
+
 In this repo I will implement some algorithms you could find in recruitment platforms like "codility"
 The idea is to be selftrained, and also to help you to check your skills if you're looking for a new job
 
